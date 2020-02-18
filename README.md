@@ -1,6 +1,6 @@
 # risingverse conda environment
 
-`conda` virtual environment for running "risingverse" impact-projection code
+`conda` virtual environment for running "Risingverse" impact-projection code
 
 
 ## Installation
