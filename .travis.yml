@@ -20,6 +20,7 @@ jobs:
     name: "Test env build"
     script:
     - conda env create -f risingverse.yml
+    - conda list -n risingverse
   - stage: deploy
     name: "Deploy to anaconda-cloud"
     if: branch = master
