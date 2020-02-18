@@ -11,7 +11,7 @@ dependencies:
   - oauth2client
   - pandas=0.25  # Move to v1 if no deprecation warnings.
   - pip
-  - python=3.7
+  - python=3.6
   - pyyaml
   - pytest
   - scipy
