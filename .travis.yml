@@ -27,4 +27,4 @@ jobs:
     before_script:
     - conda config --set anaconda_upload yes
     script: 
-    - anaconda -t $ANACONDA_TOKEN upload --user $ANACONDA_USER risingverse.yml
+    - anaconda -t $ANACONDA_TOKEN upload risingverse.yml
