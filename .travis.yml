@@ -14,17 +14,16 @@ before_install:
 - conda install anaconda-client conda-build
 
 jobs:
-  fastfinish: true
+  fast_finish: true
   include:
   - stage: test
     name: "Test env build"
     script:
     - conda env create -f risingverse.yml
-    - conda env list
   - stage: deploy
     name: "Deploy to anaconda-cloud"
     if: branch = master
     before_script:
     - conda config --set anaconda_upload yes
-    script: anaconda -t $ANACONDA_TOKEN upload --user $ANACONDA_USER risingverse.yml
-    script: anaconda upload --user  --token $ANACONDA_TOKEN risingverse.yml
+    script: 
+    - anaconda -t $ANACONDA_TOKEN upload --user $ANACONDA_USER risingverse.yml
