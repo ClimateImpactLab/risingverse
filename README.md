@@ -17,7 +17,7 @@ To install `anaconda-client`, run `conda install anaconda-client`.
 Install this conda environment with:
 
 ```bash
-conda env create ClimateImpactLab/risingverse-py27
+conda env create ClimateImpactLab/risingverse
 ```
 
 activate it with 
