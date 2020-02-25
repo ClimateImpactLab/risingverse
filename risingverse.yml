@@ -16,7 +16,7 @@ dependencies:
   - pytest
   - scipy
   - statsmodels
-  - xarray=0.9
+  - xarray=0.10
   - pip:
     - impactlab-tools
     - metacsv
