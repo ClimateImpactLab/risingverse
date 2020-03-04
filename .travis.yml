@@ -3,6 +3,10 @@ notifications:
   email: on_failure
 language: python
 
+stages:
+- name: deploy
+  if: branch = master
+
 before_install:
 - wget -nv https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
 - bash miniconda.sh -b -p $HOME/miniconda
@@ -23,7 +27,6 @@ jobs:
     - conda list -n risingverse
   - stage: deploy
     name: "Deploy to anaconda-cloud"
-    if: branch = master
     before_script:
     - conda config --set anaconda_upload yes
     script: 
