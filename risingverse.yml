@@ -16,6 +16,7 @@ dependencies:
   - scipy
   - setuptools_scm
   - statsmodels
+  - bottleneck
   - xarray=0.10
   - pip:
     - impactlab-tools
