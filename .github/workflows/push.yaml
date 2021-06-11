@@ -19,13 +19,15 @@ jobs:
           auto-update-conda: true
           activate-environment: ""
           auto-activate-base: true
-      - name: Push
-        env: # Or as an environment variable
-          ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
-          ANACONDA_USER: ClimateImpactLab
+      - name: Install dependencies
         run: |
           conda install anaconda-client conda-build
           conda config --set anaconda_upload yes
           conda info
           conda list
+      - name: Push
+        env:
+          ANACONDA_TOKEN: ${{ secrets.ANACONDA_TOKEN }}
+          ANACONDA_USER: ClimateImpactLab
+        run: |
           anaconda -t $ANACONDA_TOKEN upload --user $ANACONDA_USER risingverse.yml
