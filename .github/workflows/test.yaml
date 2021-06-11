@@ -1,0 +1,26 @@
+name: Test conda environment build
+
+on:
+  push:
+    branches:
+    - master
+  pull_request:
+    branches:
+    - master
+
+jobs:
+  test-environment:
+    name: Test conda environment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: conda-incubator/setup-miniconda@v2
+        with:
+          activate-environment: "risingverse"
+          environment-file: risingverse.yml
+          python-version: 3.x
+          auto-activate-base: false
+      - name: conda info
+        run: |
+          conda info -a
+          conda list

@@ -1,6 +1,5 @@
 # risingverse conda environment
 
-[![Build Status](https://travis-ci.org/ClimateImpactLab/risingverse.svg?branch=master)](https://travis-ci.org/ClimateImpactLab/risingverse)
 [![anaconda-cloud](https://anaconda.org/climateimpactlab/risingverse/badges/version.svg)](https://anaconda.org/ClimateImpactLab/risingverse)
 
 `conda` virtual environment for running "Risingverse" impact-projection code
@@ -28,6 +27,6 @@ conda activate risingverse
 
 ## Support
 
-This environment is maintained on github at https://github.com/ClimateImpactLab/risingverse.
+This environment is maintained at https://github.com/ClimateImpactLab/risingverse.
 
-The environment is deployed to https://anaconda.org/ClimateImpactLab/risingverse.
+The environment is released to https://anaconda.org/ClimateImpactLab/risingverse.
