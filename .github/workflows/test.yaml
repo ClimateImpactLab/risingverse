@@ -18,7 +18,6 @@ jobs:
         with:
           activate-environment: "risingverse"
           environment-file: risingverse.yml
-          python-version: 3.x
           auto-activate-base: false
       - name: conda info
         run: |
