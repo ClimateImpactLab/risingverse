@@ -1,4 +1,4 @@
-name: Test conda environment build
+name: Test conda environment
 
 on:
   push:
@@ -12,6 +12,9 @@ jobs:
   test-environment:
     name: Test conda environment
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        shell: bash -l {0}
     steps:
       - uses: actions/checkout@v2
       - uses: conda-incubator/setup-miniconda@v2
@@ -19,6 +22,7 @@ jobs:
           activate-environment: "risingverse"
           environment-file: risingverse.yml
           auto-activate-base: false
+          auto-update-conda: true
       - name: conda info
         run: |
           conda info -a
