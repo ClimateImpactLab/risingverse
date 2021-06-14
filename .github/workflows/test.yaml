@@ -2,7 +2,7 @@ name: Test conda environment
 
 on:
   schedule:
-    - cron: "* * * * 1"  # Every Monday.
+    - cron: "5 5 * * 1"  # Every Monday.
   push:
     branches:
     - master
